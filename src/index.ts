@@ -7,7 +7,7 @@ import { url } from './constants';
     console.log("Here's some trivia for ya: ", response.data);
   };
 
-  class HelloWorld extends HTMLElement {
+  class TriviaButton extends HTMLElement {
     constructor() {
       super();
       const shadow = this.attachShadow({ mode: 'closed' });
@@ -17,6 +17,6 @@ import { url } from './constants';
       shadow.appendChild(rootEl);
     }
   }
-  window.customElements.define('hello-world', HelloWorld);
-  document.querySelector('main')!.appendChild(new HelloWorld());
+  window.customElements.define('trivia-button', TriviaButton);
+  document.querySelector('main')!.appendChild(new TriviaButton());
 })();
