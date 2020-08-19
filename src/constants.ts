@@ -1,1 +1,1 @@
-export const url = 'http://numbersapi.com/';
+export const url = 'http://numbersapi.com';
