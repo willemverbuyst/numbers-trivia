@@ -1,17 +1,22 @@
-import './trivia-element';
 import axios from 'axios';
 import { url } from './constants';
 
-const fetchNumberTrivia = async (num: number) => {
-  const response = await axios.get(`${url}/${num}`);
-  console.log(response.data);
+(() => {
+  const fetchNumberTrivia = async () => {
+    const response = await axios.get(`${url}/23`);
+    console.log("Here's some trivia for ya: ", response.data);
+  };
 
-  const main = document.querySelector('main')!;
-
-  const element = document.createElement('trivia-element');
-
-  element.innerText = response.data;
-  main.appendChild(element);
-};
-
-fetchNumberTrivia(13);
+  class HelloWorld extends HTMLElement {
+    constructor() {
+      super();
+      const shadow = this.attachShadow({ mode: 'closed' });
+      const rootEl = document.createElement('button');
+      rootEl.textContent = 'Trivia in the console';
+      rootEl.addEventListener('click', () => fetchNumberTrivia());
+      shadow.appendChild(rootEl);
+    }
+  }
+  window.customElements.define('hello-world', HelloWorld);
+  document.querySelector('main')!.appendChild(new HelloWorld());
+})();
