@@ -11,7 +11,7 @@ export class TriviaButton extends HTMLElement {
     super();
     const shadow = this.attachShadow({ mode: 'closed' });
     const tButton = document.createElement('button');
-    tButton.textContent = 'Trivia in the dev-tools';
+    tButton.textContent = 'Trivia';
     tButton.addEventListener('click', () => fetchNumberTrivia());
     shadow.appendChild(tButton);
   }
