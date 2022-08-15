@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@webcomponents/custom-elements": "^1.5.0",
-    "axios": "^0.19.2"
+    "axios": "^0.27.2"
   },
   "devDependencies": {
     "source-map-loader": "^1.1.3",
