@@ -1,6 +1,14 @@
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "daily"
+      interval: 'daily'
+    ignore:
+      - dependency-name: 'source-map-loader'
+      - dependency-name: 'ts-loader'
+      - dependency-name: 'typescript'
+        versions: ['4.x']
+      - dependency-name: 'webpack'
+      - dependency-name: 'webpack-cli'
+      - dependency-name: 'webpack-dev-server'
