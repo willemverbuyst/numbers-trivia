@@ -9,6 +9,4 @@ Practice:
 - Web Components
 - Github actions
 
-[live](https://willemverbuyst.github.io/numbers-trivia/)
-
 ![screenshot](./img/screenshot.png)
