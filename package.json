@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@webcomponents/custom-elements": "^1.4.2",
+    "@webcomponents/custom-elements": "^1.5.1",
     "axios": "^0.27.2"
   },
   "devDependencies": {
