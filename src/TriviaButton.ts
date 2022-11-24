@@ -16,6 +16,7 @@ export class TriviaButton extends HTMLElement {
     const shadow = this.attachShadow({ mode: 'closed' });
     const tButton = document.createElement('button');
     tButton.textContent = 'Trivia';
+    tButton.style.fontSize = '3rem';
     tButton.addEventListener('click', () => fetchNumberTrivia());
     shadow.appendChild(tButton);
   }
